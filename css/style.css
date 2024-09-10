@@ -22,6 +22,92 @@ body {
   background: #0073d0;
 }
 /* پایان استایل اسکرول بار */
+
+
+
+
+
+
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* رنگ پس‌زمینه لودر */
+  z-index: 9999; /* لودر بالاتر از سایر عناصر */
+}
+
+.container {
+  --uib-size: 100px;
+  --uib-color: #0073df;
+  --uib-speed: 2.6s;
+  --uib-dot-size: calc(var(--uib-size) * 0.23);
+  position: absolute;
+  left: 50%;
+  transform: translateX(-5%);
+  display: flex;
+  justify-content: space-between;
+  width: var(--uib-size);
+  height: var(--uib-dot-size);
+  filter: url('#uib-jelly-ooze');
+}
+
+.dot {
+  position: absolute;
+  top: calc(50% - var(--uib-dot-size) / 2);
+  left: calc(0px - var(--uib-dot-size) / 2);
+  display: block;
+  height: var(--uib-dot-size);
+  width: var(--uib-dot-size);
+  border-radius: 50%;
+  background-color: var(--uib-color);
+  animation: stream var(--uib-speed) linear infinite both;
+  transition: background-color 0.3s ease;
+}
+
+.dot:nth-child(2) {
+  animation-delay: calc(var(--uib-speed) * -0.2);
+}
+
+.dot:nth-child(3) {
+  animation-delay: calc(var(--uib-speed) * -0.4);
+}
+
+.dot:nth-child(4) {
+  animation-delay: calc(var(--uib-speed) * -0.6);
+}
+
+.dot:nth-child(5) {
+  animation-delay: calc(var(--uib-speed) * -0.8);
+}
+
+@keyframes stream {
+  0%,
+  100% {
+    transform: translateX(0) scale(0);
+  }
+
+  50% {
+    transform: translateX(calc(var(--uib-size) * 0.5)) scale(1);
+  }
+
+  99.999% {
+    transform: translateX(calc(var(--uib-size))) scale(0);
+  }
+}
+
+
+
+
+
+
+
+
 .scrollToTop {
   position: fixed;
   bottom: 20px;
@@ -92,32 +178,36 @@ body {
 }
 
 #carts-number {
+  font-family: sans-serif;
   position: absolute;
   right: -5px;
   top: 0;
   font-size: 0.85rem;
   height: 1.25rem;
   width: 1.25rem;
-  line-height: 1.25rem;
+  line-height: 1.1rem;
   color: #fff;
   background-color: #ff0000;
   border-radius: 50%;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 #fav-number {
+  font-family: sans-serif;
   position: absolute;
   right: -5px;
   top: 0;
   font-size: 0.85rem;
   height: 1.25rem;
   width: 1.25rem;
-  line-height: 1.25rem;
+  line-height: 1.1rem;
   color: #fff;
   background-color: #ff0000;
   border-radius: 50%;
+  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -828,15 +918,17 @@ body {
 /* دکمه‌های ناوبری */
 .prev,
 .next {
+  font-family: sans-serif;
   position: absolute !important;
   top: 50% !important;
   transform: translateY(-50%) !important;
   background-color: #ffffff !important;
   border: none !important;
   padding: 7px 20px !important;
+  line-height: 36px;
   cursor: pointer !important;
   border-radius: 10px !important;
-  font-size: 24px !important;
+  font-size: 26px !important;
   color: #333 !important;
   transition: background-color 0.3s !important;
 }

@@ -28,8 +28,58 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+
   </head>
-  <body style="background-color: #f2faff">
+  <body style="background-color: #d8f0ff">
+
+
+
+
+
+
+
+
+
+    <div class="loader">
+      <div class="container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+    
+    <svg width="0" height="0" class="svg">
+      <defs>
+        <filter id="uib-jelly-ooze">
+          <feGaussianBlur
+            in="SourceGraphic"
+            stdDeviation="3"
+            result="blur"
+          />
+          <feColorMatrix
+            in="blur"
+            mode="matrix"
+            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+            result="ooze"
+          />
+          <feBlend in="SourceGraphic" in2="ooze" />
+        </filter>
+      </defs>
+    </svg>
+    
+
+    
+    
+
+
+
+
+
+
+
+
     <button id="scrollToTop" class="scrollToTop">
       <i class="fas fa-angle-up"></i>
     </button>
@@ -37,7 +87,7 @@
     <!-- شروع هدر سایت -->
     <nav
       class="navbar navbar-expand-lg"
-      style="background-color: #26ccff; z-index: 1000"
+      style="background-color: #007bff; z-index: 1000"
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="#" style="color: #fff; font-weight: 600"
@@ -207,7 +257,14 @@
     <div
       id="carouselExampleCaptions"
       class="carousel slide"
-      style="width: 70%; margin: 0 auto; position: relative; top: 12vh"
+      style="
+        width: 65%;
+        margin: 0 auto;
+        position: relative;
+        top: 11vh;
+        border: 15px solid #007bff;
+        border-radius: 10px;
+      "
     >
       <div class="carousel-indicators">
         <button
@@ -277,19 +334,19 @@
 
     <!-- شروع بخش گالری -->
     <section class="gallery">
-      <div class="item">
+      <div class="item" data-aos="fade-right">
         <img
           src="https://gem-sport.ir/uploads/image/rootimage/32/179b9f8343bc16a5f98967e267181aea.jpg?w=500&h=500"
           alt="T-shirt"
         />
       </div>
-      <div class="item">
+      <div class="item" data-aos="fade-up">
         <img
           src="https://gem-sport.ir/uploads/image/rootimage/33/5c78ebcef6634e71a4319a10f354f3be.jpg?w=500&h=500"
           alt="Sneakers"
         />
       </div>
-      <div class="item">
+      <div class="item" data-aos="fade-left">
         <img
           src="https://gem-sport.ir/uploads/image/rootimage/34/65ceaa373b460f5907f3c608d0265fa9.jpg?w=500&h=500"
           alt="Accessory"
@@ -302,7 +359,7 @@
     <div class="product-section">
       <h2>محصولات ویژه</h2>
       <div class="product-grid">
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-up">
           <img
             src="https://oss.sazito.com/apiuploads/gemsport/uploads/image/rootimage/2160/84c3391787c55f780e76ec4b2a2965c4.jpg?w=400&h=400&q=90"
             alt="محصول 1"
@@ -315,7 +372,7 @@
             <i class="fas fa-shopping-cart" onclick="addCart()"></i>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-up">
           <img
             src="https://oss.sazito.com/apiuploads/gemsport/uploads/image/rootimage/2160/84c3391787c55f780e76ec4b2a2965c4.jpg?w=400&h=400&q=90"
             alt="محصول 2"
@@ -328,7 +385,7 @@
             <i class="fas fa-shopping-cart" onclick="addCart()"></i>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-up">
           <img
             src="https://oss.sazito.com/apiuploads/gemsport/uploads/image/rootimage/2160/84c3391787c55f780e76ec4b2a2965c4.jpg?w=400&h=400&q=90"
             alt="محصول 3"
@@ -341,7 +398,7 @@
             <i class="fas fa-shopping-cart" onclick="addCart()"></i>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-up">
           <img
             src="https://oss.sazito.com/apiuploads/gemsport/uploads/image/rootimage/2160/84c3391787c55f780e76ec4b2a2965c4.jpg?w=400&h=400&q=90"
             alt="محصول 4"
@@ -355,7 +412,7 @@
           </div>
         </div>
         <!-- ردیف دوم -->
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-up">
           <img
             src="https://oss.sazito.com/apiuploads/gemsport/uploads/image/rootimage/2160/84c3391787c55f780e76ec4b2a2965c4.jpg?w=400&h=400&q=90"
             alt="محصول 5"
@@ -368,7 +425,7 @@
             <i class="fas fa-shopping-cart" onclick="addCart()"></i>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-up">
           <img
             src="https://oss.sazito.com/apiuploads/gemsport/uploads/image/rootimage/2160/84c3391787c55f780e76ec4b2a2965c4.jpg?w=400&h=400&q=90"
             alt="محصول 6"
@@ -381,7 +438,7 @@
             <i class="fas fa-shopping-cart" onclick="addCart()"></i>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-up">
           <img
             src="https://oss.sazito.com/apiuploads/gemsport/uploads/image/rootimage/2160/84c3391787c55f780e76ec4b2a2965c4.jpg?w=400&h=400&q=90"
             alt="محصول 7"
@@ -394,7 +451,7 @@
             <i class="fas fa-shopping-cart" onclick="addCart()"></i>
           </div>
         </div>
-        <div class="product-card">
+        <div class="product-card" data-aos="fade-up">
           <img
             src="https://oss.sazito.com/apiuploads/gemsport/uploads/image/rootimage/2160/84c3391787c55f780e76ec4b2a2965c4.jpg?w=400&h=400&q=90"
             alt="محصول 8"
@@ -412,7 +469,7 @@
     </div>
     <!-- پایان بخش محصولات ویژه-->
 
-    <div class="slider-section">
+    <div class="slider-section" data-aos="fade-up">
       <h2 class="slider-title">محصولات ویژه ما</h2>
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -564,28 +621,28 @@
       <div class="services-title">
         <h1>خدمات</h1>
       </div>
-      <div class="service main-service">
+      <div class="service main-service" data-aos="fade-down">
         <i>
           <img src="images/mail-truck.gif" alt="" />
         </i>
         <h3>تحویل فوری</h3>
         <p>محصولات شما به زودی ارسال خواهد شد</p>
       </div>
-      <div class="service">
+      <div class="service" data-aos="fade-right">
         <i>
           <img src="images/shield.gif" alt="" />
         </i>
         <h3>گارانتی محصول</h3>
         <p>تمامی محصولات دارای ضمانت کیفیت می باشند.</p>
       </div>
-      <div class="service">
+      <div class="service" data-aos="fade-up">
         <i>
           <img src="images/transformation.png" alt="" />
         </i>
         <h3>تنوع محصولات</h3>
         <p>ما طیف گسترده ای از محصولات را ارائه می دهیم.</p>
       </div>
-      <div class="service">
+      <div class="service" data-aos="fade-left">
         <i>
           <img src="images/secure-payment.png" alt="" />
         </i>
@@ -601,7 +658,7 @@
       <div class="social-title">
         <h1>اجتماعی ما</h1>
       </div>
-      <div class="social-follow">
+      <div class="social-follow" data-aos="fade-right">
         <i>
           <img
             src="images/instagram (1).png"
@@ -618,7 +675,7 @@
           </p>
         </div>
       </div>
-      <div class="social-follow">
+      <div class="social-follow" data-aos="fade-left">
         <i>
           <img src="images/telegram.png" alt="Telegram" class="social-icon" />
         </i>
@@ -638,7 +695,7 @@
       <div class="FAQ-title">
         <h1>سوالات متداول</h1>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-right">
         <i>
           <img
             src="images/question-mark.png"
@@ -654,7 +711,7 @@
           </p>
         </div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-left">
         <i>
           <img
             src="images/shopping-cart.png"
@@ -670,7 +727,7 @@
           </p>
         </div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-right">
         <i>
           <img
             src="images/credit-card.png"
@@ -686,7 +743,7 @@
           </p>
         </div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-left">
         <i>
           <img src="images/back.png" alt="" style="height: 50px; width: 50px" />
         </i>
@@ -698,7 +755,7 @@
           </p>
         </div>
       </div>
-      <div class="faq-item">
+      <div class="faq-item" data-aos="fade-right">
         <i>
           <img
             src="images/live-chat.png"
@@ -719,7 +776,11 @@
     <!-- پایان بخش سوالات -->
 
     <!-- شروع بخش فوتر -->
-    <footer class="footer text-dark" style="background-color: #007bff">
+    <footer
+      class="footer text-dark"
+      style="background-color: #007bff"
+      data-aos="fade-down"
+    >
       <div class="container">
         <div class="row justify-content-center">
           <!-- اضافه کردن justify-content-center -->
@@ -800,6 +861,7 @@
     </footer>
 
     <!-- پایان بخش فوتر -->
+
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

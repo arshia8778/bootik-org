@@ -12,6 +12,15 @@ var product_section_all = $.getElementById("product-section-all");
 var product_back_btn = $.getElementById("back-carts");
 var product_section_btn = $.getElementById("product-section-btn");
 
+window.onload = function () {
+  setTimeout(function () {
+    const loader = document.querySelector(".loader");
+    const Svg = document.querySelector(".svg");
+    loader.style.display = "none"; // مخفی کردن لودر
+    Svg.style.display = "none"; // مخفی کردن svg
+  }, 5000); // 5000 میلی‌ثانیه = 5 ثانیه
+};
+
 window.onscroll = function () {
   const button = document.getElementById("scrollToTop");
   if (
@@ -33,7 +42,7 @@ document.getElementById("scrollToTop").onclick = function () {
 };
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= 100) {
+  if (window.scrollY >= 30) {
     //هنگام اسکرول بخش یوزر به بالای سایت میچسبد
     user_section.style.top = "0";
   } else {
