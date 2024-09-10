@@ -29,7 +29,7 @@ body {
 
 
 
-.loader {
+/* .loader {
   position: fixed;
   top: 0;
   left: 0;
@@ -38,8 +38,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #fff; /* رنگ پس‌زمینه لودر */
-  z-index: 9999; /* لودر بالاتر از سایر عناصر */
+  background-color: #fff;
+  z-index: 9999; 
 }
 
 .container {
@@ -99,7 +99,7 @@ body {
   99.999% {
     transform: translateX(calc(var(--uib-size))) scale(0);
   }
-}
+} */
 
 
 
