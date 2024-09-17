@@ -8,6 +8,7 @@ body {
   font-family: "Vazir", sans-serif;
   background-color: #e3f2fd;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 /* استایل اسکرول بار */
 ::-webkit-scrollbar {
@@ -22,12 +23,6 @@ body {
   background: #0073d0;
 }
 /* پایان استایل اسکرول بار */
-
-
-
-
-
-
 
 /* .loader {
   position: fixed;
@@ -101,13 +96,16 @@ body {
   }
 } */
 
-
-
-
-
-
-
-
+#scroll-value {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  border-radius: 8px;
+  background-color: #007bff;
+  z-index: 9999;
+}
 .scrollToTop {
   position: fixed;
   bottom: 20px;
@@ -636,7 +634,6 @@ body {
     line-height: 3.55vw !important;
   }
 }
-
 
 @media (max-width: 955px) {
   #carouselExampleCaptions {

@@ -21,6 +21,14 @@ window.onload = function () {
   }, 5000); // 5000 میلی‌ثانیه = 5 ثانیه
 };
 
+function scrollLine() {
+  const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+  const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+  document.getElementById("scroll-value").style.width = scrollPercentage + "%";
+}
+
+window.addEventListener("scroll", scrollLine);
+
 window.onscroll = function () {
   const button = document.getElementById("scrollToTop");
   if (
@@ -42,11 +50,15 @@ document.getElementById("scrollToTop").onclick = function () {
 };
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= 30) {
+  if (window.scrollY >= 20) {
     //هنگام اسکرول بخش یوزر به بالای سایت میچسبد
     user_section.style.top = "0";
+    user_section.style.width = "100%";
+    user_section.style.borderRadius = "0";
   } else {
     user_section.style.top = "55px";
+    user_section.style.width = "90%";
+    user_section.style.borderRadius = "0 0 8px 8px";
   }
 });
 
